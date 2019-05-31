@@ -18,9 +18,7 @@ public class Task1Servlet extends AbstractServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         String companyName = req.getParameter("companyName");
-        int vmi = 1;
         try (Connection connection = getConnection(req.getServletContext())) {
-            int vmi2 = 2;
             if (companyName == null || companyName.equals("")) {
                 List<Task1> task1list = TaskDao.getTask1Result(connection);
                 req.setAttribute("task1list", task1list);
@@ -34,8 +32,6 @@ public class Task1Servlet extends AbstractServlet {
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
-        int béla = 1;
-
     }
 
 }
