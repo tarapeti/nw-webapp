@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <!doctype html>
 <html lang="en">
@@ -17,9 +18,9 @@
         </tr>
         </thead>
         <tbody>
-            <c:forEach var="record" items="${task2list}">
+            <c:forEach var="record" items="${task3list}">
                 <tr>
-                    <td>${record.company}</td>
+                    <td>${record.compName}</td>
                 </tr>
             </c:forEach>
         </tbody>
